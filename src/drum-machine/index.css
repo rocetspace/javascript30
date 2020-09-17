@@ -1,0 +1,100 @@
+* { box-sizing: border-box }
+
+html, body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#root {
+    background: url(https://forwardjustice.org/wp-content/uploads/2017/10/FICPFM-Hero.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;    
+}
+
+#keys {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100px;
+    height: 100px;
+    border: 4px solid orange;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.wrapper:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wrapper:active .key {
+    color: coral;
+}
+
+.wrapper:active {
+    transform: scale(1.05, 1.05);
+    border-color: coral;
+}
+
+.key {
+    font-family: Arial;
+    color: orange;
+    font-size: 36px;
+}
+
+.desc {
+    font-family: Arial;
+    font-size: 12px;
+    color: white;
+}
+
+.press {
+    animation: pulse .3s;
+}
+
+.press .key {
+    animation: pulse-text .3s;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(1.05, 1.05);
+    border-color: coral;
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1, 1);
+    border-color: coral;
+  }
+}
+
+@keyframes pulse-text {
+  0% {
+    color: coral;
+  }
+  70% {
+    color: coral;
+  }
+  100% {
+    color: orange;
+  }
+}
