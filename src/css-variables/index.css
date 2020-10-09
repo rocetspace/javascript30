@@ -1,1 +1,44 @@
-#root {}
+:root {
+  --bg-color: lightcoral;
+  --spacing: 10px;
+  --blur: 5px;
+}
+
+#root {
+    height: 100vh;
+    background: #333;
+    color: #FFF;
+    font-family: 'Arial';
+}
+
+header {
+    text-align: center;
+    padding: 40px;
+}
+
+.subhead {
+    color: var(--bg-color)
+}
+
+header h1 {
+    margin: 0;
+}
+
+figure {
+    margin: 0 auto;
+    width: 500px;
+    height: 400px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    padding: var(--spacing);
+    filter: blur(var(--blur));
+    background: var(--bg-color);
+}
+
+.controls {
+    padding: 10px 0;
+    text-align: center;
+}
